@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jasmine's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Consolidated script tag for pop-up.js -->
+    <script src="script.js" defer></script>
+    
+    <!-- Consolidated font imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="all-content">
+        <header>
+            <div id="top-bar">
+                <h1><span id="custom-name">Jasmine's</span> Portfolio</h1>
+                <button class="btn-menu">Menu</button>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#noteworthy-section">
+                            <img src="image/tool-bar-icons/penInk.png" alt="Noteworthy icon"> Noteworthy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#more-section">
+                            <img src="image/tool-bar-icons/add.png" alt="More icon"> More
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <img src="image/tool-bar-icons/send.png" alt="Contact icon"> Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+		
+        <main>
+            <section id="welcome-message" class="welcome-message">
+                <h4><span class="wave">&#128075;</span> Welcome,</h4>
+                <p>As a 4th-year Electrical Engineering student, I'm pleased to share my projects, which focus on innovation and problem-solving in technology. Here, you’ll find my work including embedded systems, real-time control, and more each demonstrating my ability to create efficient and reliable solutions. Feel free to explore and get in touch if you'd like to know more.</p>
+            </section>
+
+            <section id="noteworthy-section">
+                <div class="title-with-icon"> 
+                    <img src="image/tool-bar-icons/penInk.png" class="icon-title" alt="Noteworthy icon">
+                    <h2 class="title-h">Noteworthy Projects</h2>
+                </div>
+                <div class="article-group-note">
+                    <!-- Project 1 -->
+                    <article class="noteworthy-box">
+                        <img src="image/noteworthy-projects/miro.jpg" alt="MiRo-E social robot">
+                        <div class="project-text">
+                            <div class="github-title">
+                                <h3>Capstone project: Enhancing social robots</h3>
+                                <a href="https://github.com/bnadam4/Miro-e-Capstone">
+                                    <img src="image/github-logo.png" alt="GitHub logo">
+                                </a>
+                            </div>
+                            <p class="date">Sep 2024 - Present</p>
+                            <p class="tags"><span class="type-tag">#bcit-group-project</span> <span class="microcontroller-tag">#raspberry-pi</span> <span class="other-tag">#miro-e</span></p>
+                            <p>Hospital environments can be intimidating and even isolating, making it difficult for children to cope with the healthcare setting. To address this, we will customize the MiRo-E robot, an interactive companion, to engage young patients in therapeutic activities like guided breathing exercises, interactive games, and relaxation techniques, helping to ease anxiety and improve their hospital experience.</p>
+                        </div>
+                        <a href="projects/capstone-project.html"><p class="button-page">Read more</p></a>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="noteworthy-box">
+                        <img src="image/noteworthy-projects/alertly.jpg" alt="Alertly project widget">
+                        <div class="project-text">
+                            <h3>Alertly: Widget Display</h3>
+                            <p class="date">Aug 2024 - Present</p>
+                            <p class="tags"><span class="type-tag">#diy-project</span> <span class="microcontroller-tag">#esp32</span> <span class="other-tag">#productivity</span></p>
+                            <p>I love using the widgets on my phone but they get buried under a sea of apps and pages. To help manage that, I created Alertly, a productivity-focused device designed to provide quick, accessible reminders conveniently on the workspace. With a dedicated display, it features essential widgets like a clock, calendar, to-do list, and countdown timer. The goal is to keep organized and mindful of time, decreasing distractions often caused by apps and multiple open pages on your phone. Alertly is powered by 7.5’’ e-paper display and ESP32 microcontroller with build in Wifi, all programmed on Arduino IDE.</p>
+                        </div>
+                        <a href="projects/alertly.html"><p class="button-page">Read more</p></a>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="noteworthy-box">
+                        <img src="image/noteworthy-projects/line-following-robot.jpg" alt="Line following robot">
+                        <div class="project-text">
+                            <div class="github-title">
+                                <h3>Line Following Robot with Remote Control</h3>
+                                <a href="https://github.com/jasmine-portfolio/Line-Following-Robot-with-Remote-Control">
+                                    <img src="image/github-logo.png" alt="GitHub logo">
+                                </a>
+                            </div>
+                            <p class="date">Nov - Dec 2024</p>
+                            <p class="tags"><span class="type-tag">#bcit-group-project</span> <span class="microcontroller-tag">#ti</span> <span class="other-tag">#robotics</span></p>
+                            <p>Line Following Robot with Remote Control project integrates the TI TMS320F28379D microcontroller and an ESP32 module for wireless control. The robot utilizes a PID control algorithm to calculate error to adjust its speed in real-time, enabling it to follow a line autonomously. The ESP32 module allows remote adjustments of settings, including motor speed, via Wi-Fi and SCI protocol. Built on TI BIOS, the system efficiently manages real-time tasks using threads and interrupts for optimized performance.</p>
+                        </div>
+                        <a href="projects/line-following-robot.html"><p class="button-page">Read more</p></a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="more-section">
+				<div class="title-with-icon">
+					<img src="image/tool-bar-icons/add.png" class="icon-title" alt="More icon">
+					<h2 class="title-h"> More Projects</h2>
+				</div>
+                <div class="article-group-more">
+					<article class="more-box">
+                        <img src="image/more-projects/calculator-formulapad.jpg" alt="Calculator FormulaPad">
+                        <div class="project-text">
+                            <h3>Calculator FormulaPad</h3>
+							<p class="date">Jul 2023 - Present</p>
+                            <p class="tags"><span class="type-tag">#diy-project</span> <span class="microcontroller-tag">#stm32-esp32</span> <span class="other-tag">#productivity</span></p>
+                            <p>As a student, I am tired of using a calculator with a monochrome screen and pressing at those tiny buttons. To modernize this essential tool, I'm developing FormulaPad, an intuitive graphing calculator. This calculator also features macro-pad to make the computer work faster thus boosting productivity.</p>
+                        </div>
+                    </article>
+					<article class="more-box">
+                        <img src="image/more-projects/ball-sorter.jpg" alt="Color sorter">
+                        <div class="project-text">
+							<div class="github-title">
+								<h3>Color Sorter</h3>
+								<a href="https://github.com/jasmine-portfolio/Color-sorter"><img src="image/github-logo.png" alt="Github icon"></a>
+							</div>
+							<p class="date">Mar 2023</p>
+                            <p class="tags"><span class="type-tag">#bcit-project</span> <span class="microcontroller-tag">#raspberry-pi</span> <span class="other-tag">#automation</span></p>
+                            <p>This is an automatic 4-color ball sorter that efficiently sorts up to 16 balls in just 15 seconds. Powered by a Raspberry Pi, it utilizes computer vision, servo motors, and LED feedback for real-time color detection and sorting. Featuring GPIO control, the system uses a simple GUI for manual operation in C++, allowing users to monitor and control the sorting process.</p>
+                        </div>
+						<button class="popup-button" data-video-id="video1">Watch video</button>
+							<div class="video-popup" id="video1">
+								<div class="video-container">
+									<video controls>
+											<source src="image/more-projects/more-videos/ball-sorter.mp4" type="video/mp4">
+									</video>
+								<button class="close-button">×</button>
+								</div>
+							</div>
+                    </article>
+					<article class="more-box">
+                        <img src="image/more-projects/simon-says-smile.jpg" alt="Simon Says Smile">
+                        <div class="project-text">
+							<div class="github-title">
+								<h3>Simon Says FPGA Game</h3>
+								<a href="https://github.com/jasmine-portfolio/FPGA-Simon-Says-Game"><img src="image/github-logo.png" alt="Github icon"></a>
+							</div>
+							<p class="date">Feb - Apr 2024</p>
+                            <p class="tags"><span class="type-tag">#bcit-group-project</span> <span class="microcontroller-tag">#fpga</span> <span class="other-tag">#game</span></p>
+                            <p>This reimagined Simon Says game, developed on an FPGA, combines interactive design with real-time processing using SystemVerilog. The project utilizes an 8x8 LED matrix for pattern display, a joystick for input, and a buzzer for sound feedback. It is optimized for synthesis and hardware efficiency, with thorough validation using a testbench to ensure reliable performance.</p>
+                        </div>
+						<button class="popup-button" data-video-id="video2">Watch video</button>
+							<div class="video-popup" id="video2">
+								<div class="video-container">
+									<video controls>
+											<source src="image/more-projects/more-videos/simon-says-game.mp4" type="video/mp4">
+									</video>
+								<button class="close-button">×</button>
+								</div>
+							</div>
+                    </article>
+
+					<article class="more-box">
+                        <img src="image/more-projects/card-holder.jpg" alt="Card holder">
+                        <div class="project-text">
+                            <h3>Card Holder</h3>
+							<p class="date">Jul 2022</p>
+                            <p class="tags"><span class="type-tag">#diy-project</span> <span class="other-tag">#3d-design</span></p>
+                            <p>In my leisure time, I enjoy engaging in brain teaser card games. Using SolidWorks, I designed a card holder to facilitate easy card storage and retrieval. The design features a 60-degree angle from the x-y surface and maintains a uniform thickness of 1.5mm using composite solids. I also simulated the assembly with cards for precise dimensions.</p>
+                        </div>
+                    </article>
+					<article class="more-box">
+                        <img src="image/more-projects/environmental-drone-module.jpg" alt="Enviromental Drone Module">
+                        <div class="project-text">
+                            <h3>Environmental Drone Module</h3>
+							<p class="date">Jan - May 2021 (during COVID)</p>
+                            <p class="tags"><span class="type-tag">#capu-group-project</span> <span class="microcontroller-tag">#arduino</span> <span class="other-tag">#data-collection</span></p>
+                            <p>For this project, our instructor assigned us a theoretical case in which "the client" sought to build a structure near Capilano University. As a team of four, we were required to develop a specialized drone attachment to monitor the environment while adhering to specific requirements and restrictions.</p>
+                        </div>
+						<button class="popup-button" data-video-id="video3">Watch video</button>
+							<div class="video-popup" id="video3">
+								<div class="video-container">
+									<video controls>
+											<source src="image/more-projects/more-videos/drone-module.mp4" type="video/mp4">
+									</video>
+								<button class="close-button">×</button>
+								</div>
+							</div>
+                    </article>
+					
+					<article class="more-box">
+						<!--<img src="image/more-projects/website.jpg" alt="calculator">-->
+                        <div class="project-text">
+							<div class="github-title">
+								<h3>Want this website as a template?</h3>
+								<a href="https://github.com/jasmine-portfolio/Responsive-Portfolio-Template"><img src="image/github-logo.png" alt="Github icon"></a>
+							</div>
+							<p class="date">Dec 2024</p>
+                            <p class="tags"><span class="type-tag">#diy-project</span> <span class="other-tag">#online-presence</span></p>
+                            <p>Click on the github icon beside the title to get copy of this code. This portfolio template is a customizable HTML/CSS template designed to adapt to all devices, ensuring a professional appearance across mobile, tablet, and desktop views. Featuring intuitive navigation and customizable icons, this template allows easy personalization to effectively showcase skills and projects.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+			<section id="contact">
+				<div class="title-with-icon">
+					<img src="image/tool-bar-icons/send.png" class="icon-title" alt="Send icon">
+					<h2 id="title-h"> Contact Me</h2>
+				</div>
+				<p>If you have any inquiries, feel free to reach out!</p>
+				<p>Email: <a href="jariss@my.bcit.ca">jariss@my.bcit.ca</a></p>
+			</section>
+
+        </main>
+        <footer>
+            <a href="https://github.com/jasmine-portfolio"><img src="image/github-logo.png" class="social-media" alt="GitHub"></a>
+           
+        </footer>
+    </div>
+</body>
+
+</html>
