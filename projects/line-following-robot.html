@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jasmine's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="all-content">
+
+        <header class="image-header">
+            <a href="../index.html"><img src="../image/tool-bar-icons/back_arrow.png" class="icon-title" alt="icon"></a>
+        </header>
+
+        <main>
+            <section id="highlighted-project-section">
+                <div class="project-header">
+
+                    <h2>Line Following Robot with Remote Control</h2>
+                    <h3 class="date"> November - December 2024 (2 months)</h3>
+                    <p class="tags"><span class="type-tag">#bcit-group-project</span> <span class="microcontroller-tag">#ti</span> <span class="other-tag">#robotics</span></p>
+                    <p class="tags"> <span class="microcontroller-tag">#bios-multi-theading</span><span class="other-tag">#esp32</span> <span class="type-tag">#pid-controlled</span></p>
+                    <p class="tags"> <span class="other-tag">#team-of-2</span><span class="type-tag">#C-C++</span> <span class="microcontroller-tag">#wireless-wifi</span></p>
+                </div>
+
+                <!--<img src="../image/noteworthy-projects/line-following-robot.jpg" class="responsive" alt="icon">-->
+
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="../image/noteworthy-projects/line-following-robot/full-car.jpg" alt="Line following robot">
+
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="../image/noteworthy-projects/line-following-robot/block-diagram.jpg" alt="Block diagram">
+
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="../image/noteworthy-projects/line-following-robot/calibration-mode.jpg" alt="Calibration mode">
+
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="../image/noteworthy-projects/line-following-robot/remote-screen.jpg" alt="Remote control screen">
+
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+<br>
+                <div class="article-group-project">
+                    <article class="project-box">
+                        <h3 class="title-project">Overview</h3>
+                        <p>Line Following Robot with Remote Control project integrates the TI TMS320F28379D microcontroller and an ESP32 module for wireless control. The robot utilizes a PID control algorithm to calculate error to adjust its speed in real-time, enabling it to follow a line autonomously. The ESP32 module allows remote adjustments of settings, including motor speed, via Wi-Fi and SCI protocol. Built on TI BIOS, the system efficiently manages real-time tasks using threads and interrupts for optimized performance.</p>
+                    </article>
+                    <article class="project-box-2">
+                        <h3 class="title-project">Concept</h3>
+                        <p>The robot autonomously follows a line using PID control based on real-time sensor feedback, while transmitting RPM and power consumption data to a remote control for monitoring. The system is designed for:</p>
+
+                        <ul>
+                            <li><strong>SYS/BIOS RTOS</strong> which manages multiple thread types:
+                                <ul>
+                                    <li><strong>HWI</strong> handles timers for periodic tasks and XINT interrupts for encoder speed and serial data.</li>
+									<li><strong>SWI</strong> performs data calculations, including PID control and data transmission, based on HWI data.</li>
+									<li><strong>Idle State</strong> controls a heartbeat LED to indicate system activity.</li>
+                                </ul>
+                            </li>
+                            <li><strong>CPU efficiency</strong> and <strong>low power</strong> by leveraging threaded interrupts and periodic functions.</li>
+                            <li>Standalone operation with ESP32 for <strong>wireless</strong> communication via Wi-Fi UDP and SCI (UART) protocol.</li>
+                        </ul>
+
+                    </article>
+                    <article class="project-box-2">
+                        <h3 class="title-project">Achievements</h3>
+                        <ul>
+                            <li>Refined line-following precision through iterative testing of PID constant adjustments for smooth responsive navigation.</li>
+                            <li>Developed a protocol and optimizing system performance to minimize transmission delays.</li>
+                            <li>Balanced accurate power consumption measurements without affecting performance for monitoring system.</li>
+                            <li>Tested motors, sensors, and microcontrollers for smooth operation, ensuring reliable system performance.</li>
+                            <li>Implemented error-checking to maintain stability and prevent critical failures (e.g., divide-by-zero errors).</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-box">
+                        <h3 class="title-project">Outcome</h3>
+                        <p>The project successfully created a line-following robot with remote control, real-time performance monitoring, and adjustable settings. The robot can follow a line autonomously, with feedback on speed and power consumption, offering greater flexibility and control.</p>
+                        <video class="responsive" controls>
+                            <source src="../image/noteworthy-projects/line-following-robot/line-following-with-remote.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </article>
+                </div>
+
+            </section>
+
+        </main>
+        <footer>
+            <a href="https://github.com/jasmine-portfolio"><img src="../image/github-logo.png" class="social-media" alt="GitHub"></a>
+            
+        </footer>
+    </div>
+</body>
+
+</html>
