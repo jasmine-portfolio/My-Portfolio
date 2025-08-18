@@ -26,7 +26,7 @@
                 <div class="project-header">
 
                     <h2>Line Following Robot with Remote Control</h2>
-                    <h3 class="date"> November - December 2024 (2 months)</h3>
+                    <h3 class="date"> Nov - Dec 2024</h3>
                     <p class="tags"><span class="type-tag">#bcit-group-project</span> <span class="microcontroller-tag">#ti</span> <span class="other-tag">#robotics</span></p>
                     <p class="tags"> <span class="microcontroller-tag">#bios-multi-theading</span><span class="other-tag">#esp32</span> <span class="type-tag">#pid-controlled</span></p>
                     <p class="tags"> <span class="other-tag">#team-of-2</span><span class="type-tag">#C-C++</span> <span class="microcontroller-tag">#wireless-wifi</span></p>
@@ -78,39 +78,34 @@
                 <div class="article-group-project">
                     <article class="project-box">
                         <h3 class="title-project">Overview</h3>
-                        <p>Line Following Robot with Remote Control project integrates the TI TMS320F28379D microcontroller and an ESP32 module for wireless control. The robot utilizes a PID control algorithm to calculate error to adjust its speed in real-time, enabling it to follow a line autonomously. The ESP32 module allows remote adjustments of settings, including motor speed, via Wi-Fi and SCI protocol. Built on TI BIOS, the system efficiently manages real-time tasks using threads and interrupts for optimized performance.</p>
+                        <p>This project involves building a smart robot using TI TMS320F28379D and an ESP32 module. It uses PID control for line tracking and supports wireless tuning of motor speed and other parameters via WiFi and UART, enabling fine-grained control and real-time system optimization during operation. The design focused on responsiveness, reliability, and ease of tuning.</p>
                     </article>
                     <article class="project-box-2">
                         <h3 class="title-project">Concept</h3>
-                        <p>The robot autonomously follows a line using PID control based on real-time sensor feedback, while transmitting RPM and power consumption data to a remote control for monitoring. The system is designed for:</p>
+                        <p>To build a responsive and tunable robot, the project included the following features:</p>
 
                         <ul>
-                            <li><strong>SYS/BIOS RTOS</strong> which manages multiple thread types:
-                                <ul>
-                                    <li><strong>HWI</strong> handles timers for periodic tasks and XINT interrupts for encoder speed and serial data.</li>
-									<li><strong>SWI</strong> performs data calculations, including PID control and data transmission, based on HWI data.</li>
-									<li><strong>Idle State</strong> controls a heartbeat LED to indicate system activity.</li>
-                                </ul>
-                            </li>
-                            <li><strong>CPU efficiency</strong> and <strong>low power</strong> by leveraging threaded interrupts and periodic functions.</li>
-                            <li>Standalone operation with ESP32 for <strong>wireless</strong> communication via Wi-Fi UDP and SCI (UART) protocol.</li>
+                            <li>PID-based motor control for accurate and smooth line tracking in real time.</li>
+							<li>Live parameter tuning via UART over WiFi using ESP32 integration.<li>
+							<li>Multithreaded real-time scheduling with SYS/BIOS RTOS, utilizing HWI, SWI, and Idle threads.</li>
+                            <li>Feedback loop to monitor and report RPM, motor power, and tracking performance to the user interface. </li>
                         </ul>
 
                     </article>
                     <article class="project-box-2">
                         <h3 class="title-project">Achievements</h3>
                         <ul>
-                            <li>Refined line-following precision through iterative testing of PID constant adjustments for smooth responsive navigation.</li>
-                            <li>Developed a protocol and optimizing system performance to minimize transmission delays.</li>
-                            <li>Balanced accurate power consumption measurements without affecting performance for monitoring system.</li>
-                            <li>Tested motors, sensors, and microcontrollers for smooth operation, ensuring reliable system performance.</li>
-                            <li>Implemented error-checking to maintain stability and prevent critical failures (e.g., divide-by-zero errors).</li>
+                            <li>Designed and tuned a responsive PID controller through iterative real-world testing.</li>
+                            <li>Implemented safety protocols (e.g., divide-by-zero guards) to ensure robust, fault-tolerant operation.</li>
+                            <li>Integrated real-time UART communication with the ESP32 for wireless updates to control parameters.</li>
+                            <li>Used SYS/BIOS to allocate system tasks efficiently, balancing precision and CPU usage.</li>
+                            <li>Developed a simple monitoring interface that displays real-time speed and energy data. </li>
                         </ul>
                     </article>
 
                     <article class="project-box">
                         <h3 class="title-project">Outcome</h3>
-                        <p>The project successfully created a line-following robot with remote control, real-time performance monitoring, and adjustable settings. The robot can follow a line autonomously, with feedback on speed and power consumption, offering greater flexibility and control.</p>
+                        <p>Success! The robot followed a black line track with adjustable speed and PID gains, while wirelessly reporting motor data and system status. </p>
                         <video class="responsive" controls>
                             <source src="../image/noteworthy-projects/line-following-robot/line-following-with-remote.mp4" type="video/mp4">
                             Your browser does not support the video tag.
